@@ -1,0 +1,35 @@
+# Implementación código
+
+Programamos la solución de la ecuación de difusión en 1D por diferencias finitas para condiciones iniciales de Neaumann.
+
+El código completo se encuentra al final
+
+### Representación de la matriz
+
+
+Se trata de la matriz tridiagonal que el programa resolverá propuesta numericamente en base a la ecuación de difusión en condiciones de frontera de Neumann.
+
+Vemos que a diferencia de la matriz indicada por condiciones de Dirichlet, cambian los coeficientes de la primera y última fila (y en lo demás la matriz tridiagonal es la misma) y desprendemos de la matriz constante con que contenía las temperaturas en la frontera.
+
+::: {.callout-tip title="Tip with Title"}
+This is a callout with a title.
+:::
+
+```python
+# Parametros de entrada
+L = 5            # Longitud del dominio [m]
+a = 1            # Difusividad térmica [m^2/s]
+n = 10           # número de nodos 
+dt = 0.5         # Tamaño de paso temporal [s]
+
+# Variables auxiliares
+dx = L/n
+phi = (a*dt)/(dx**2)
+
+# Variables de tiempo
+tiempo = 8
+nt = tiempo/dt
+
+```
+
+

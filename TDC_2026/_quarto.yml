@@ -1,0 +1,64 @@
+project:
+  type: book
+
+book:
+  #configuraciones globales
+  title: "TDC_2026"
+  subtitle: "Notas del curso: Métodos numéricos para la transferencia de Calor - IER UNAM 2026"
+  #author: "César Gael Pérez"
+  #date: "25/4/2026"
+  favicon: images/ier_logo.png
+  reader-mode: true
+  page-navigation: true
+  back-to-top-navigation: true
+  search: true
+  
+
+  #site-url: https://cleaning-data-r.ala.org.au/
+  #repo-url: https://github.com/AtlasOfLivingAustralia/cleaning_data
+  
+  image: images/ier_logo.png
+  image-alt: "A Pacific Cleaner Shrimp illustration"
+  open-graph: 
+    image: images/ier_logo.png
+    image-alt: "A cover image with a Pacific Cleaner Shrimp illustration"
+  twitter-card: 
+    image: images/ier_logo.png
+    image-alt: "A cover image with a Pacific Cleaner Shrimp illustration"
+    card-style: summary_large_image
+  sidebar:
+    logo: images/UNAMmasIER_logo.png
+
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: Difusion/Intro_dif.qmd
+      chapters:
+        - Difusion/Ley_Fourier.qmd
+        - Difusion/Programacion_DF.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    mainfont: Roboto
+    monofont: Fira Code
+    highlight-style: arrow
+    monobackgroundcolor: "#F7F7F7"
+    #include-in-header: _fathom.html
+   # Se necesita cuenta en fathom para rastrear
+   # quien ve mi siito
+    theme: 
+   #   - theme.css
+   #   - theme.scss #archivos de estilo
+      - lumen
+    #include-in-header: 
+     # - text: |
+      #    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+execute:
+  code-annotations: hover
+  number-depth: 3

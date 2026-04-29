@@ -1,0 +1,22 @@
+# Bienvenidos {.unnumbered}
+
+Este blog/libro recompila las notas del curso: \textbf{"Métodos Numéricos para la Transferecia de Calor"], ofertada el semestre 2026-2 en el Instituto de Energías Renovables de la \textbf{UNAM} cómo asiganatura optativa a los alumnos de 8vo semestre de la Ingeniería en Energías Renovables.
+
+El curso es impartido por el Dr. Patricio J. Valadés Pelayo quien a través de la teoría de procesos de transferencia de calor muestra los fundamentos para realizar soluciones numéricas por método de diferencias finitas a las ecuaciones diferenciales que gobiernan los fenómenos de transporte. Además, complementa cada caso con la implementación de un modelo estocástico fundamentado en la mecánica estadística como una alternativa eficaz a las ecuaciones de movimiento.
+
+
+#### Licencia 
+
+Este libro está disponible para su lectura gratuita y se encuentra bajo la licencia internacional CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/). Esto significa que el libro puede compartirse y redistribuirse siempre que se reconozca la autoría y se indiquen adecuadamente los cambios menores. 
+
+  
+#### Citación
+
+
+
+## Reconocimiento
+
+Este libro toma su plantilla del proyecto [Cleaning Biodiversity Data in R] desde su repositorio en: https://github.com/AtlasOfLivingAustralia/cleaning_data.git
+
+
+## Acknowledgements {.unnumbered}
