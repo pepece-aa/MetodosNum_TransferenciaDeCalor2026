@@ -1,29 +1,23 @@
 {
   "index.qmd": {
-    "index.html": "cfd2b463"
+    "index.html": "8b716a93"
   },
   "intro.qmd": {
-    "intro.html": "5ea4a582"
-  },
-  "summary.qmd": {
-    "summary.html": "50d6802b"
-  },
-  "references.qmd": {
-    "references.html": "68970da0"
+    "intro.html": "f609a419"
   },
   "Difusion/Intro_dif.qmd": {
-    "Intro_dif.html": "e8ff7884"
+    "Intro_dif.html": "a633314f"
   },
   "Difusion/Ley_Fourier.qmd": {
-    "Ley_Fourier.html": "c80f9d05"
-  },
-  "./index.qmd": {
-    "index.html": "299a20d8"
-  },
-  "./Difusion/Ley_Fourier.qmd": {
-    "Ley_Fourier.html": "1b05f028"
+    "Ley_Fourier.html": "59658ea0"
   },
   "Difusion/Programacion_DF.qmd": {
-    "Programacion_DF.html": "184b2d83"
+    "Programacion_DF.html": "85b4c135"
+  },
+  "summary.qmd": {
+    "summary.html": "4e3dabe0"
+  },
+  "references.qmd": {
+    "references.html": "22f62474"
   }
 }

@@ -10,11 +10,11 @@
     ]
   },
   {
-    "objectID": "index.html#acknowledgement-of-country",
-    "href": "index.html#acknowledgement-of-country",
+    "objectID": "index.html#reconocimiento",
+    "href": "index.html#reconocimiento",
     "title": "TDC_2026",
-    "section": "Acknowledgement of Country",
-    "text": "Acknowledgement of Country\nThe Atlas of Living Australia acknowledges that we live and work on Aboriginal and Torres Strait Islander lands, rivers, and seas. Indigenous Australian peoples held and continue to hold incomparably intricate environmental knowledge as first peoples of this country. We are working with communities to acknowledge and archive these different types of knowledge in a culturally sensitive way.\nThe authors of this book currently reside on the lands of the Ngunnawal and Ngambri (Canberra), Wurundjeri Woi Wurrung and Bunurong (Naarm/Melbourne), Turrbal and Yuggera (Meanjin/Brisbane), Kaurna (Tarntanya/Adelaide), and Gadigal (Gadigal/Sydney) peoples. We pay our respects to Elders past and present.",
+    "section": "Reconocimiento",
+    "text": "Reconocimiento\nEste libro toma su plantilla del proyecto [Cleaning Biodiversity Data in R] desde su repositorio en: https://github.com/AtlasOfLivingAustralia/cleaning_data.git",
     "crumbs": [
       "Bienvenidos"
     ]
@@ -68,16 +68,6 @@
     "crumbs": [
       "Fenómenos de transporte",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conducción</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#reconocimiento",
-    "href": "index.html#reconocimiento",
-    "title": "TDC_2026",
-    "section": "Reconocimiento",
-    "text": "Reconocimiento\nEste libro toma su plantilla del proyecto [Cleaning Biodiversity Data in R] desde su repositorio en: https://github.com/AtlasOfLivingAustralia/cleaning_data.git",
-    "crumbs": [
-      "Bienvenidos"
     ]
   },
   {
