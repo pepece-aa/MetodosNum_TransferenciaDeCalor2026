@@ -30,6 +30,134 @@ phi = (a*dt)/(dx**2)
 tiempo = 8
 nt = tiempo/dt
 
+#Distribución de temperatura inicial
+
+T = np.full((n,1),fill_value=25,) #Campo de temperaturas de 25°C en todo su dominio T1,T2,...Tn
+
+#T = np.sin(2*np.pi*X/L)
+    #Vector con las temperaturas en las fronteras
+
+#Temperaturas de las fronteras
+Tf1 = 25
+Tf2 = 100
+
+TF = np.zeros((n,1))  #Vector de la forma [Tf1,0,0,...Tf2]
+TF[0] = Tf1
+TF[n-1] = Tf2
+
 ```
 
+Realizamos el mallado en una dimensión en nodos del mismo ancho. Ubicando las Coordenadas de los centroides justo en medio de los nodos que tienen un ancho de delta x. Lo hacemos un vector.
 
+
+```python
+
+X = np.linspace(dx/2,(L-dx/2),n)
+X = np.reshape(X,(-1,1))
+
+#Vector b
+b = T+(phi*TF)
+
+```
+
+Despues armamos la matriz tridiagonal A. Comenzamos con una matriz identidad y modificamos renglon a renglon con un ciclo for.
+
+```python
+#MAtriz tridiagonal o matriz de fourier 
+for i in range(len(A)):
+    if i > 0:
+        A[i,i-1] = -phi
+    if i < n-1:
+        A[i,i+1] = -phi
+        
+    A[i,i] = (2*phi+1)
+
+```
+
+Por úlitmo resolvemos la ecuación matricial dada por:
+
+$$
+ A * X = B
+$$
+
+
+```python
+for i in range(int(nt)):
+   
+    b = T+(phi*TF)
+    T = np.linalg.solve(A,b)
+    plt.plot(X,T)
+```
+
+Aquí el código completo para que observe y edite:
+
+
+
+
+```{python}
+#| code-fold: show     # mostrar por defecto, pero plegable
+#| code-summary: "Ver/ocultar código"
+#| echo: true          # mostrar el código (necesario para plegar)
+#| warning: false      # ocultar warnings
+#| message: false      # ocultar mensajes
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parametros de entrada
+L = 5            #Longitud del dominio [m]
+a = 1  #Difusividad térmica [m^2/s]
+n = 10        #número de nodos 
+dt = 0.5        #Tamaño de paso temporal [s]
+
+#Variables auxiliares
+
+dx = L/n         #Longitud del volumen de control [m]
+phi = (a*dt)/(dx**2)  #Número de Fourier (de malla)
+
+#Variables de tiempo
+
+tiempo = 6 #seg, tiempo de simulación
+nt = tiempo/dt # Pasos en el tiempo
+
+
+#Temperaturas de las fronteras
+Tf1 = 25
+Tf2 = 100
+
+TF = np.zeros((n,1))  #Vector de la forma [Tf1,0,0,...Tf2]
+TF[0] = Tf1
+TF[n-1] = Tf2
+
+#Vector b
+#b = T+phi*TF
+
+ #Coordenadas de los centroides justo en medio de los nodos que tienen un ancho de delta x
+X = np.linspace(dx/2,(L-dx/2),n)
+X = np.reshape(X,(-1,1))
+
+
+#Tambien podemos inicializar la distribución de temperaturas como una funcion seno
+T = np.sin(2*np.pi*X/L)*15+25
+#Vector b
+b = T+(phi*TF)
+
+#Matriz de ceros
+A = np.zeros((n,n))
+
+
+for i in range(len(A)):
+    if i > 0:
+        A[i,i-1] = -phi
+    if i < n-1:
+        A[i,i+1] = -phi
+        
+    A[i,i] = (2*phi+1)
+
+
+for i in range(int(nt)):
+   
+    b = T+(phi*TF)
+    T = np.linalg.solve(A,b)
+    plt.plot(X,T)
+```
