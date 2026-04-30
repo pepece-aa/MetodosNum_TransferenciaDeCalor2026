@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Implementación código – TDC_2026</title>
+<title>4&nbsp; Solución numérica por Método de Monte Carlo – TDC_2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -69,7 +34,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../summary.html" rel="next">
-<link href="../Difusion/Ley_Fourier.html" rel="prev">
+<link href="../Difusion/Programacion_DF.html" rel="prev">
 <link href="../images/ier_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -139,12 +104,12 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="3&nbsp; Implementación código – TDC_2026">
+<meta property="og:title" content="4&nbsp; Solución numérica por Método de Monte Carlo – TDC_2026">
 <meta property="og:description" content="">
 <meta property="og:image" content="images/ier_logo.png">
 <meta property="og:site_name" content="TDC_2026">
 <meta property="og:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
-<meta name="twitter:title" content="3&nbsp; Implementación código – TDC_2026">
+<meta name="twitter:title" content="4&nbsp; Solución numérica por Método de Monte Carlo – TDC_2026">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="images/ier_logo.png">
 <meta name="twitter:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
@@ -160,7 +125,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Difusion/Intro_dif.html">Fenómenos de transporte</a></li><li class="breadcrumb-item"><a href="../Difusion/Programacion_DF.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Difusion/Intro_dif.html">Fenómenos de transporte</a></li><li class="breadcrumb-item"><a href="../Difusion/Difusion_por_MC.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -225,8 +190,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></span></a>
   </div>
 </li>
       </ul>
@@ -234,7 +205,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -248,21 +219,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#representación-de-la-matriz" id="toc-representación-de-la-matriz" class="nav-link active" data-scroll-target="#representación-de-la-matriz"><span class="header-section-number">3.0.1</span> Representación de la matriz</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Difusion/Intro_dif.html">Fenómenos de transporte</a></li><li class="breadcrumb-item"><a href="../Difusion/Programacion_DF.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Difusion/Intro_dif.html">Fenómenos de transporte</a></li><li class="breadcrumb-item"><a href="../Difusion/Difusion_por_MC.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></h1>
 </div>
 
 
@@ -279,153 +244,49 @@ window.Quarto = {
 </header>
 
 
-<p>Programamos la solución de la ecuación de difusión en 1D por diferencias finitas para condiciones iniciales de Neaumann.</p>
-<p>El código completo se encuentra al final</p>
-<section id="representación-de-la-matriz" class="level3" data-number="3.0.1">
-<h3 data-number="3.0.1" class="anchored" data-anchor-id="representación-de-la-matriz"><span class="header-section-number">3.0.1</span> Representación de la matriz</h3>
-<p>Se trata de la matriz tridiagonal que el programa resolverá propuesta numericamente en base a la ecuación de difusión en condiciones de frontera de Neumann.</p>
-<p>Vemos que a diferencia de la matriz indicada por condiciones de Dirichlet, cambian los coeficientes de la primera y última fila (y en lo demás la matriz tridiagonal es la misma) y desprendemos de la matriz constante con que contenía las temperaturas en la frontera.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Tip with Title">
-<div class="callout-header d-flex align-content-center">
+<p>Debemos evaluar la naturaleza inherente multiescalar integrando metodologías micro y macroescópicas. Donde a escalas menores impera procesos estocásticos; así, a escala mesoscópica el comportamiento de cada partícula es relevante y tambien los efectos colectivos (como la Ley de Fourier).</p>
+<p>Veamos como se comporta una partícula bajo las reglas de Fourier y la ecuación de difusión.</p>
+<p>Pensemos en un experimento mental donde una aguja de Tungsteno con un filo atómico, conserva en su punta unos 4000°C, aquel filo tan diminuto toca la superficie de placa metálica por un microsegundo. Es una placa muy extensa donde sus fronteras tan alejadas no perciben sus efectos de la aguja. ¿Cómo se comportaría la difusión en tal caso?</p>
+<p>Representamos el campo compuesto por una sola partícula por la <strong>función Delta de Dirac</strong>. Misma que tiene las siguientes características:</p>
+<ul>
+<li>Su valor es cero en todo su dominio excepto en el origen (donde se localizaría la partícula).</li>
+<li>La integración en su dominio es cero.</li>
+<li>En el origen tiene valor infinito.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.researchgate.net/publication/336337651/figure/fig1/AS:811726022922243@1570541973763/Representacion-de-la-delta-de-Dirac.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Dirac</figcaption>
+</figure>
+</div>
+<p>Ahora encontramos la solución fundamental a la ecuación de difusión a partir de la concentración de una carga puntual a partir de la función de Green.</p>
+<p>Para la ecuación de difusión la función de Green correspondiente es:</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial t} = D \nabla^2 f
+\]</span></p>
+<p>Teniendo como condiciones iniciales que en el tiempo cero (t=0) y en el origen se presenta la función de Dirac.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Tip with Title
+<span class="screen-reader-only">Note</span>Resolución de la función de Green
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This is a callout with a title.</p>
+<p>AAAAAAAAAAAAA</p>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parametros de entrada</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">5</span>            <span class="co"># Longitud del dominio [m]</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span>            <span class="co"># Difusividad térmica [m^2/s]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span>           <span class="co"># número de nodos </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.5</span>         <span class="co"># Tamaño de paso temporal [s]</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables auxiliares</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>dx <span class="op">=</span> L<span class="op">/</span>n</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> (a<span class="op">*</span>dt)<span class="op">/</span>(dx<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables de tiempo</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>tiempo <span class="op">=</span> <span class="dv">8</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>nt <span class="op">=</span> tiempo<span class="op">/</span>dt</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Distribución de temperatura inicial</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> np.full((n,<span class="dv">1</span>),fill_value<span class="op">=</span><span class="dv">25</span>,) <span class="co">#Campo de temperaturas de 25°C en todo su dominio T1,T2,...Tn</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#T = np.sin(2*np.pi*X/L)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Vector con las temperaturas en las fronteras</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Temperaturas de las fronteras</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Tf1 <span class="op">=</span> <span class="dv">25</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Tf2 <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>TF <span class="op">=</span> np.zeros((n,<span class="dv">1</span>))  <span class="co">#Vector de la forma [Tf1,0,0,...Tf2]</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>TF[<span class="dv">0</span>] <span class="op">=</span> Tf1</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>TF[n<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> Tf2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Realizamos el mallado en una dimensión en nodos del mismo ancho. Ubicando las Coordenadas de los centroides justo en medio de los nodos que tienen un ancho de delta x. Lo hacemos un vector.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.linspace(dx<span class="op">/</span><span class="dv">2</span>,(L<span class="op">-</span>dx<span class="op">/</span><span class="dv">2</span>),n)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.reshape(X,(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Vector b</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> T<span class="op">+</span>(phi<span class="op">*</span>TF)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Despues armamos la matriz tridiagonal A. Comenzamos con una matriz identidad y modificamos renglon a renglon con un ciclo for.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#MAtriz tridiagonal o matriz de fourier </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)):</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        A[i,i<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>phi</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> n<span class="op">-</span><span class="dv">1</span>:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        A[i,i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>phi</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    A[i,i] <span class="op">=</span> (<span class="dv">2</span><span class="op">*</span>phi<span class="op">+</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Por úlitmo resolvemos la ecuación matricial dada por:</p>
+</div>
+<p>Su solución representa una función Gaussiana que se desplega en si misma a través del tiempo alcanzado a abarcar el dominio entero.</p>
 <p><span class="math display">\[
-A * X = B
+f (x,t) = \frac{1}{\sqrt{4\pi Dt}}e^{\frac{-x^2}{4Dt}}
 \]</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(nt)):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> T<span class="op">+</span>(phi<span class="op">*</span>TF)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    T <span class="op">=</span> np.linalg.solve(A,b)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    plt.plot(X,T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Aquí el código completo para que observe y edite:</p>
-<div id="f02ccb47" class="cell" data-message="false" data-execution_count="1">
-<details open="" class="code-fold">
-<summary>Ver/ocultar código</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Parametros de entrada</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">5</span>            <span class="co">#Longitud del dominio [m]</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span>  <span class="co">#Difusividad térmica [m^2/s]</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span>        <span class="co">#número de nodos </span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.5</span>        <span class="co">#Tamaño de paso temporal [s]</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Variables auxiliares</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>dx <span class="op">=</span> L<span class="op">/</span>n         <span class="co">#Longitud del volumen de control [m]</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> (a<span class="op">*</span>dt)<span class="op">/</span>(dx<span class="op">**</span><span class="dv">2</span>)  <span class="co">#Número de Fourier (de malla)</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Variables de tiempo</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>tiempo <span class="op">=</span> <span class="dv">6</span> <span class="co">#seg, tiempo de simulación</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>nt <span class="op">=</span> tiempo<span class="op">/</span>dt <span class="co"># Pasos en el tiempo</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Temperaturas de las fronteras</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>Tf1 <span class="op">=</span> <span class="dv">25</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>Tf2 <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>TF <span class="op">=</span> np.zeros((n,<span class="dv">1</span>))  <span class="co">#Vector de la forma [Tf1,0,0,...Tf2]</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>TF[<span class="dv">0</span>] <span class="op">=</span> Tf1</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>TF[n<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> Tf2</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#Vector b</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#b = T+phi*TF</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a> <span class="co">#Coordenadas de los centroides justo en medio de los nodos que tienen un ancho de delta x</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.linspace(dx<span class="op">/</span><span class="dv">2</span>,(L<span class="op">-</span>dx<span class="op">/</span><span class="dv">2</span>),n)</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.reshape(X,(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co">#Tambien podemos inicializar la distribución de temperaturas como una funcion seno</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> np.sin(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>X<span class="op">/</span>L)<span class="op">*</span><span class="dv">15</span><span class="op">+</span><span class="dv">25</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="co">#Vector b</span></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> T<span class="op">+</span>(phi<span class="op">*</span>TF)</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co">#Matriz de ceros</span></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.zeros((n,n))</span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(A)):</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>        A[i,i<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>phi</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> n<span class="op">-</span><span class="dv">1</span>:</span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>        A[i,i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>phi</span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    A[i,i] <span class="op">=</span> (<span class="dv">2</span><span class="op">*</span>phi<span class="op">+</span><span class="dv">1</span>)</span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(nt)):</span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> T<span class="op">+</span>(phi<span class="op">*</span>TF)</span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    T <span class="op">=</span> np.linalg.solve(A,b)</span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    plt.plot(X,T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Programacion_DF_files/figure-html/cell-2-output-1.png" width="566" height="411" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -830,13 +691,13 @@ A * X = B
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Difusion/Ley_Fourier.html" class="pagination-link" aria-label="Conducción">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></span>
+      <a href="../Difusion/Programacion_DF.html" class="pagination-link" aria-label="Implementación código">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

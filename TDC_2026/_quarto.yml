@@ -37,6 +37,7 @@ book:
       chapters:
         - Difusion/Ley_Fourier.qmd
         - Difusion/Programacion_DF.qmd
+        - Difusion/Difusion_por_MC.qmd
     - summary.qmd
     - references.qmd
 

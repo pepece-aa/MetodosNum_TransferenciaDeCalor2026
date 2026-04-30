@@ -1,0 +1,43 @@
+# Solución numérica por Método de Monte Carlo
+
+Debemos evaluar la naturaleza inherente multiescalar integrando metodologías micro y macroescópicas. Donde a escalas menores impera procesos estocásticos; así, a escala mesoscópica el comportamiento de cada partícula es relevante y tambien los efectos colectivos (como la Ley de Fourier). 
+
+Veamos como se comporta una partícula bajo las reglas de Fourier y la ecuación de difusión.
+
+
+Pensemos en un experimento mental donde una aguja de Tungsteno con un filo atómico, conserva en su punta unos 4000°C, aquel filo tan diminuto toca la superficie de placa metálica por un microsegundo. Es una placa muy extensa donde sus fronteras tan alejadas no perciben sus efectos de la aguja. ¿Cómo se comportaría la difusión en tal caso?
+
+Representamos el campo compuesto por una sola partícula por la **función Delta de Dirac**. Misma que tiene las siguientes características:
+
+- Su valor es cero en todo su dominio excepto en el origen (donde se localizaría la partícula).
+- La integración en su dominio es cero.
+- En el origen tiene valor infinito.
+
+![Dirac](https://www.researchgate.net/publication/336337651/figure/fig1/AS:811726022922243@1570541973763/Representacion-de-la-delta-de-Dirac.jpg){width=80%}
+
+
+Ahora encontramos la solución fundamental a la ecuación de difusión a partir de la concentración de una carga puntual  a partir de la función de Green. 
+
+Para la ecuación de difusión la función de Green correspondiente es:
+
+$$
+ \frac{\partial f}{\partial t} = D \nabla^2 f
+$$
+
+Teniendo como condiciones iniciales que en el tiempo cero (t=0) y en el origen se presenta la función de Dirac.
+
+
+::: {.callout-note collapse="true"}
+### Resolución de la función de Green
+
+
+AAAAAAAAAAAAA
+:::
+
+Su solución representa una función Gaussiana que se desplega en si misma a través del tiempo alcanzado a abarcar el dominio entero.
+
+$$
+f (x,t) = \frac{1}{\sqrt{4\pi Dt}}e^{\frac{-x^2}{4Dt}}
+$$
+
+
