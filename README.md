@@ -39,6 +39,6 @@ Este proyecto se encuentra en desarrollo activo.
 ##  Acceso al libro
 
 El libro interactivo está disponible en:
-- 
+- https://pepece-aa.github.io/MetodosNum_TransferenciaDeCalor2026/ 
 
 Este proyecto busca fomentar el aprendizaje abierto, la reproducibilidad y la implementación computacional de métodos numéricos aplicados a la ingeniería.
