@@ -5,7 +5,7 @@ Este repositorio contiene un libro interactivo desarrollado con Quarto, desplega
 
 El proyecto continúa en desarrollo continuo y tiene como objetivo servir como material de apoyo abierto para estudiantes, docentes y cualquier persona interesada en la modelación numérica de fenómenos de transferencia de calor.
 
-El contenido aborda los fundamentos de los modelos deterministas aplicados a la transferencia de calor aplicado a cada mecanismo de transporte (conduccion, convección y radiación), implementando en cada caso una modelo númerico por diferencia finitas documentado el paso a paso de su codificación. Una vez finalizado, el enfoque del curso dió paso a sentar los fundamentos teóricos que permitan obtener algoritmos de monte carlo para la simulación estocastica de los mismos. Esta intrducción presenta ejemplos de baja dimensionalidad para la introducción y familiarización de los temas.
+El contenido aborda los fundamentos de los modelos deterministas aplicados a la transferencia de calor para cada mecanismo de transporte (conduccion, convección y radiación), implementando en cada caso un modelo númerico por diferencias finitas, documentado el paso a paso de su codificación. Una vez finalizado, el enfoque del curso dió paso a sentar los fundamentos teóricos que permitan obtener algoritmos de monte carlo para la simulación estocastica de los mismos. Esta proyecto presenta ejemplos de baja dimensionalidad para la introducción y familiarización de los temas.
 
 Espero les sea de mucha utilidad y sea de su interes con el mismo entusiasmo que a mí significó la clase.
 
