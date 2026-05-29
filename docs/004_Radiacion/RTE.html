@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Summary – TDC_2026</title>
+<title>6&nbsp; Transferencia de radiación – TDC_2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./004_Radiacion/RTE.html" rel="prev">
-<link href="./images/ier_logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b1e0664f7163246056094d2f562f3522.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../summary.html" rel="next">
+<link href="../004_Radiacion/Interacciones_fisicas.html" rel="prev">
+<link href="../images/ier_logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b1e0664f7163246056094d2f562f3522.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,13 +74,42 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="7&nbsp; Summary – TDC_2026">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="6&nbsp; Transferencia de radiación – TDC_2026">
 <meta property="og:description" content="">
 <meta property="og:image" content="images/ier_logo.png">
 <meta property="og:site_name" content="TDC_2026">
 <meta property="og:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
-<meta name="twitter:title" content="7&nbsp; Summary – TDC_2026">
+<meta name="twitter:title" content="6&nbsp; Transferencia de radiación – TDC_2026">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="images/ier_logo.png">
 <meta name="twitter:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../004_Radiacion/Intro_radiacion.html">Radiación</a></li><li class="breadcrumb-item"><a href="../004_Radiacion/RTE.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,12 +139,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/UNAMmasIER_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/UNAMmasIER_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/UNAMmasIER_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/UNAMmasIER_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TDC_2026</a> 
+      <a href="../">TDC_2026</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -134,13 +163,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bienvenidos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
   </div>
 </li>
@@ -150,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./002_Difusion/Intro_dif.html" class="sidebar-item-text sidebar-link">
+            <a href="../002_Difusion/Intro_dif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difusión</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,19 +188,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></span></a>
   </div>
 </li>
@@ -179,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./004_Radiacion/Intro_radiacion.html" class="sidebar-item-text sidebar-link">
+            <a href="../004_Radiacion/Intro_radiacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Radiación</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -188,13 +217,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./004_Radiacion/Interacciones_fisicas.html" class="sidebar-item-text sidebar-link">
+  <a href="../004_Radiacion/Interacciones_fisicas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Interacciones con la frontera</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./004_Radiacion/RTE.html" class="sidebar-item-text sidebar-link">
+  <a href="../004_Radiacion/RTE.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
   </div>
 </li>
@@ -202,13 +231,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -217,15 +246,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ecuación-de-transporte-radiativo-etr" id="toc-ecuación-de-transporte-radiativo-etr" class="nav-link active" data-scroll-target="#ecuación-de-transporte-radiativo-etr"><span class="header-section-number">6.1</span> Ecuación de Transporte Radiativo (ETR)</a></li>
+  <li><a href="#derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" id="toc-derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" class="nav-link" data-scroll-target="#derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo o la aproximación de su solución</a>
+  <ul class="collapse">
+  <li><a href="#solución-a-la-edo" id="toc-solución-a-la-edo" class="nav-link" data-scroll-target="#solución-a-la-edo"><span class="header-section-number">6.2.1</span> Solución a la EDO</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">6.3</span> Referencias</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../004_Radiacion/Intro_radiacion.html">Radiación</a></li><li class="breadcrumb-item"><a href="../004_Radiacion/RTE.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></h1>
 </div>
 
 
@@ -242,9 +282,279 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In summary, this book has no content whatsoever.</p>
+<p>El transporte de radiación desde fuentes de luz no coherentes se describe mediante la ecuación de transferencia radiativa (ETR)</p>
+<p>El mismo no es más que un balance, de los fenómenos de las interacciones físicas en la frontera.</p>
+<p>Se termina convirtiendo de un problema de valor de la frontera</p>
+<p>Su resolución analítica implica la resolver una ED de 7 dimensiones</p>
+<p>Comenzaremos realizando un balance de energía radiativa, conocido como ecuación de transferencia radiativa (ETR), que describe el campo de intensidad radiativa dentro del recinto en función de la posición (determinada por el vector de posición r), la dirección (determinada por el vector unitario de dirección ˆs) y la variable espectral (número de onda η), (Modet,2013).</p>
+<p>Para obtener el flujo de calor radiativo neto que atraviesa un elemento de superficie, debemos sumar las contribuciones de la energía radiativa que irradia la superficie desde todas las direcciones posibles y para todos los números de onda posibles. Por lo tanto, la integración de la ecuación de transferencia radiativa sobre todas las direcciones y números de onda conduce a una expresión de conservación de la energía radiativa aplicada a un volumen infinitesimal.</p>
+<p>propiedades de radiación de los medios participantes. es decir, cómo una sustancia puede absorber, emitir y dispersar la radiación térmica</p>
+<section id="ecuación-de-transporte-radiativo-etr" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="ecuación-de-transporte-radiativo-etr"><span class="header-section-number">6.1</span> Ecuación de Transporte Radiativo (ETR)</h2>
+<p>Realizamos un balance energético de la energía radiativa que viaja en la dirección de <span class="math inline">\(\hat{s}\)</span> dentro de un pequeño haz de rayos. El cambio de intensidad se obtiene sumando las contribuciones de emisión, absorción, dispersión en dirección opuesta a <span class="math inline">\(\hat{s}\)</span> y dispersión en la dirección de <span class="math inline">\(\hat{s}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+I_{\eta}(s+ds,\hat{s},t+dt) - I_{\eta}(s,\hat{s},t)
+&amp;= j_{\eta}(s,t)\,ds
+- \kappa_{\eta} I_{\eta}(s,\hat{s},t)\,ds \\
+&amp;\quad - \sigma_{s\eta} I_{\eta}(s,\hat{s},t)\,ds \\
+&amp;\quad + \frac{\sigma_{s\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(s,\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i\,ds
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{dI_{\eta}}{ds}
+= \hat{s}\cdot\nabla I_{\eta}
+&amp;= \kappa_{\eta} I_{b\eta}
+- \beta_{\eta} I_{\eta} \\
+&amp;\quad + \frac{\sigma_{s\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+\end{aligned}
+\]</span></p>
+<p>Simplificamos de la siguiente manera:</p>
+<p>La ecuación de transferencia radiativa se suele reescribir en términos de coordenadas ópticas adimensionales.</p>
+<p>El albedo de dispersión simple se define como:</p>
+<p><span class="math display">\[
+\omega_{\eta} \equiv
+\frac{\sigma_{s\eta}}
+{\kappa_{\eta} + \sigma_{s\eta}}
+=
+\frac{\sigma_{s\eta}}
+{\beta_{\eta}}
+\]</span></p>
+<p>Lo que la RTE queda cómo:</p>
+<p><span class="math display">\[
+\frac{dI_{\eta}}{d\tau_{\eta}}
+=
+-I_{\eta}
++
+(1-\omega_{\eta}) I_{b\eta}
++
+\frac{\omega_{\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+\]</span></p>
+<p>Los dos últimos términos de la ecuación suelen combinarse y se conocen entonces como la función fuente de la intensidad radiativa.</p>
+<p>La irradiancia global se obtiene intregar la intensidad de radiacion en toda la esfera.</p>
+<p><span class="math display">\[
+G = \int_{4\pi} I(\hat{s}) \, d\Omega
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Unidades</th>
+<th>Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\kappa\)</span></td>
+<td><span class="math inline">\(\mathrm{m^{-1}}\)</span></td>
+<td>Coeficiente de absorción</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sigma_s\)</span></td>
+<td><span class="math inline">\(\mathrm{m^{-1}}\)</span></td>
+<td>Coeficiente de dispersión</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta\)</span></td>
+<td><span class="math inline">\(\mathrm{m^{-1}}\)</span></td>
+<td>Coeficiente de extinción</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tau\)</span></td>
+<td>Adimensional</td>
+<td>Espesor óptico</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\omega\)</span></td>
+<td>Adimensional</td>
+<td>Albedo de dispersión simple</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Phi(\hat{s}_i,\hat{s})\)</span></td>
+<td>Adimensional</td>
+<td>Función de fase</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\varepsilon\)</span></td>
+<td>Adimensional</td>
+<td>Emisividad</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rho\)</span></td>
+<td>Adimensional</td>
+<td>Reflectividad</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tau_t\)</span></td>
+<td>Adimensional</td>
+<td>Transmitividad</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo o la aproximación de su solución</h2>
+<p>Podemos observar que la intensidad de radiación es la suma de dos componentes. La primera es la versión integral del término de extinsión, son todos los sumideros de energía radiativa</p>
+<p>Comenzemos por reescribir la ecuación diferencial. Quitamos el subíndice espectral <span class="math inline">\(\eta\)</span> o <span class="math inline">\(\lambda\)</span> para simplificar la notación</p>
+<p>CASO 1</p>
+<p><span class="math display">\[
+%\begin{aligned}
+\frac{dI}{ds}
+= \kappa I_{b}
+- \beta I
+\quad + \frac{\sigma}{4\pi}
+\int_{4\pi}
+I(x,\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+%\end{aligned}
+\]</span></p>
+<p>Los dos últimos términos de la ecuación suelen combinarse y se conocen entonces como la función fuente de intensidad radiativa <span class="math inline">\(S(x,\hat{s}_i)\)</span></p>
+<p>Sustituyendo <span class="math inline">\(\kappa\)</span> y <span class="math inline">\(\beta\)</span> de tal manera que</p>
+<p><span class="math display">\[
+\begin{aligned}
+\kappa &amp;= \beta (1-\omega) \\
+\sigma &amp;= \beta \omega
+\end{aligned}
+\]</span></p>
+<p>La RTE queda cómo.</p>
+<p>Sustituyendo en la ecuación diferencial:</p>
+<p><span class="math display">\[
+\frac{dI}{ds} + \beta I
+=
+\beta (1-\omega) I_b
++
+\beta \frac{\omega}{4\pi}
+\int_{4\pi} I p \, d\Omega'
+\]</span></p>
+<p>Sacamos factor común ():</p>
+<p><span class="math display">\[
+\frac{dI}{ds} + \beta I
+=
+\beta \left[
+(1-\omega) I_b
++
+\frac{\omega}{4\pi}
+\int_{4\pi} I p \, d\Omega'
+\right]
+\]</span></p>
+<p>El término entre corchetes es precisamente (S):</p>
+<p><span class="math display">\[
+\frac{dI}{ds} + \beta I = \beta S
+\]</span></p>
+<p>La ecuación queda cómo:</p>
+<p><span class="math display">\[
+\frac{dI}{ds} + \beta I = \beta S
+\]</span></p>
+<p>Aplicamos un cambio de variable. Dado que:</p>
+<p><span class="math display">\[
+\tau = \beta s
+\]</span></p>
+<p>Por regla de la cadena:</p>
+<p><span class="math display">\[
+\frac{d}{ds}
+=
+\frac{d\tau}{ds}
+\frac{d}{d\tau}
+=
+\beta \frac{d}{d\tau}
+\]</span></p>
+<p>Sustituyendo la RTE queda cómo:</p>
+<p><span class="math display">\[
+\frac{dI}{d\tau} + I = S
+\]</span></p>
+<section id="solución-a-la-edo" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="solución-a-la-edo"><span class="header-section-number">6.2.1</span> Solución a la EDO</h3>
+<p>La solución de la EDO se realiza por factor integrante de la forma</p>
+<p>$$</p>
+<p>e^{ , d} = e^{} $$</p>
+<p>Quedando la EDO cómo:</p>
+<p><span class="math display">\[
+\frac{d}{d\tau}(e^\tau I) = e^\tau S
+\]</span></p>
+<p>Integramos desde <span class="math inline">\(\tau_0\)</span> hasta <span class="math inline">\(\tau\)</span>:</p>
+<p>¿Por qué? No estoy seguro. Segun ChatGPt Porque estamos resolviendo la ecuación diferencial a lo largo de una trayectoria óptica entre dos puntos del rayo.</p>
+<ul>
+<li><span class="math inline">\(\tau_0\)</span> representa el punto inicial del recorrido del rayo,</li>
+<li><span class="math inline">\(\tau\)</span> representa el punto donde queremos conocer la intensidad</li>
+</ul>
+<p>Integrando ambos lados:</p>
+<p><span class="math display">\[
+\int_{\tau_0}^{\tau}
+\frac{d}{d\tau'}
+\left(
+e^{\tau'} I(\tau')
+\right)
+d\tau'
+=
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+\]</span></p>
+<p>El lado izquierdo se evalúa directamente:</p>
+<p><span class="math display">\[
+e^{\tau} I(\tau)
+-
+e^{\tau_0} I(\tau_0)
+=
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+\]</span></p>
+<p>Despejamos (I()):</p>
+<p><span class="math display">\[
+I(\tau)
+=
+e^{-(\tau-\tau_0)} I(\tau_0)
++
+e^{-\tau}
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+\]</span></p>
+<p>Metemos el exponencial dentro de la integral:</p>
+<p><span class="math display">\[
+I(\tau)
+=
+I(\tau_0)e^{-(\tau-\tau_0)}
++
+\int_{\tau_0}^{\tau}
+e^{-(\tau-\tau')}
+S(\tau') \, d\tau'
+\]</span></p>
+<p>Finalmente recuperamos la dependencia espacial y angular:</p>
+<p><span class="math display">\[
+I(x,\hat{s})
+=
+I(x_0,\hat{s})e^{-(\tau-\tau_0)}
++
+\int_{\tau_0}^{\tau}
+e^{-(\tau-\tau')}
+S(x',\hat{s})
+\, d\tau'
+\]</span></p>
+<p>El primer término representa la radiación inicial atenuada exponencialmente por absorción y dispersión (<strong>Ley de Beer-Lambert</strong>). EL segundo término representa toda la radiación generada dentro del medio.</p>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="referencias"><span class="header-section-number">6.3</span> Referencias</h2>
+<ul>
+<li>RADIATIVE HEAT TRANSFER, Third Edition. Michael F. Modest., Elsevier Inc., ISBN: 978-0-12-386944-9</li>
+<li>Linking the Monte Carlo radiative transfer algorithm to the radiative transfer equation, Patricio J. Valades-Pelayo*, Manuel A. Ramirez-Cabrera and Argelia Balbuena-Ortega</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -649,13 +959,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./004_Radiacion/RTE.html" class="pagination-link" aria-label="Transferencia de radiación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span>
+      <a href="../004_Radiacion/Interacciones_fisicas.html" class="pagination-link" aria-label="Interacciones con la frontera">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Interacciones con la frontera</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -33,11 +33,19 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: Difusion/Intro_dif.qmd
+    - part: 001_Fenomenos_transporte/intro_FT.qmd
+
+
+    - part: 002_Difusion/Intro_dif.qmd
       chapters:
-        - Difusion/Ley_Fourier.qmd
-        - Difusion/Programacion_DF.qmd
-        - Difusion/Difusion_por_MC.qmd
+        - 002_Difusion/Ley_Fourier.qmd
+        - 002_Difusion/Programacion_DF.qmd
+        - 002_Difusion/Difusion_por_MC.qmd
+    - part: 004_Radiacion/Intro_radiacion.qmd
+      chapters:
+        - 004_Radiacion/Interacciones_fisicas.qmd
+        - 004_Radiacion/RTE.qmd
+        - 004_Radiacion/Solucion_RTE.qmd
     - summary.qmd
     - references.qmd
 

@@ -1,0 +1,25 @@
+# Algoritmo de Monte Carlo para la solución del RTE
+
+La aplicación del método para modelar la radiación térmica se basa en la simulación de un número finito de haces de fotones
+
+%% CIta 
+Por lo tanto, este manuscrito presenta un método breve para derivar el algoritmo de la MCRT directamente de la ETR, un procedimiento que, según nuestro conocimiento, actualmente no se encuentra en la literatura especializada. Nuestro procedimiento parte de la formulación integral de la ETR, considerando una fuente puntual de haz colimado, lo que simplifica enormemente la derivación sin perder la comprensión del vínculo entre la MCRT y la ETR. El procedimiento propuesto requiere simplemente la evaluación analítica de los dos primeros términos de un desarrollo perturbativo, lo que proporciona una justificación matemática sencilla para las cadenas de Markov utilizadas en la MCRT para muestrear la ETR.
+
+
+La cuestión es ¿Cómo muestrear la RTE?
+
+
+Comenzamos por encontrar la primer solución analítica.
+
+## Solución por series de Neumman para la RTE
+
+
+
+bla bla bla
+
+
+
+## Referencias
+
+- RADIATIVE HEAT TRANSFER, Third Edition. Michael F. Modest., Elsevier Inc.,  ISBN: 978-0-12-386944-9
+- Linking the Monte Carlo radiative transfer algorithm to the radiative transfer equation,  Patricio J. Valades-Pelayo*, Manuel A. Ramirez-Cabrera and Argelia Balbuena-Ortega

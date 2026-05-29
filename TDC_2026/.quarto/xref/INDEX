@@ -22,5 +22,32 @@
   },
   "Difusion/Difusion_por_MC.qmd": {
     "Difusion_por_MC.html": "5c47d639"
+  },
+  "002_Difusion/Intro_dif.qmd": {
+    "Intro_dif.html": "a0542cd9"
+  },
+  "002_Difusion/Programacion_DF.qmd": {
+    "Programacion_DF.html": "0d7f522d"
+  },
+  "002_Difusion/Difusion_por_MC.qmd": {
+    "Difusion_por_MC.html": "5ce76779"
+  },
+  "002_Difusion/Ley_Fourier.qmd": {
+    "Ley_Fourier.html": "8fbd3939"
+  },
+  "004_Radiacion/Intro_radiacion.qmd": {
+    "Intro_radiacion.html": "3b178e6d"
+  },
+  "004_Radiacion/Interacciones_fisicas.qmd": {
+    "Interacciones_fisicas.html": "0d5ca7e6"
+  },
+  "004_Radiacion/RTE.qmd": {
+    "RTE.html": "5e89d16e"
+  },
+  "001_Fenomenos_transporte/intro_FT.qmd": {
+    "intro_FT.html": "1b68cfbc"
+  },
+  "004_Radiacion/Solucion_RTE.qmd": {
+    "Solucion_RTE.html": "a950af24"
   }
 }

@@ -1,0 +1,305 @@
+# Transferencia de radiación
+
+El transporte de radiación desde fuentes de luz no coherentes se describe mediante la ecuación de transferencia radiativa (ETR)
+
+El mismo no es más que un balance, de los fenómenos de las interacciones físicas en la frontera.
+
+Se termina convirtiendo de un problema de valor de la frontera
+
+
+Su resolución analítica implica la resolver una ED de 7 dimensiones
+
+
+Comenzaremos realizando un balance de energía radiativa, conocido como ecuación de transferencia radiativa (ETR), que describe el campo de intensidad radiativa dentro del recinto en función de la posición (determinada por el vector de posición r), la dirección (determinada por el vector unitario de dirección ˆs) y la variable espectral (número de onda η), (Modet,2013).
+
+Para obtener el flujo de calor radiativo neto que atraviesa un elemento de superficie, debemos sumar las contribuciones de la energía radiativa que irradia la superficie desde todas las direcciones posibles y para todos los números de onda posibles. Por lo tanto, la integración de la ecuación de transferencia radiativa sobre todas las direcciones y números de onda conduce a una expresión de conservación de la energía radiativa aplicada a un volumen infinitesimal.
+
+
+propiedades de radiación de los medios participantes. es decir, cómo una sustancia puede absorber, emitir y dispersar la radiación térmica
+
+
+## Ecuación de Transporte Radiativo (ETR)
+
+
+Realizamos un balance energético de la energía radiativa que viaja en la dirección de $\hat{s}$ dentro de un pequeño haz de rayos. El cambio de intensidad se obtiene sumando las contribuciones de emisión, absorción, dispersión en dirección opuesta a $\hat{s}$ y dispersión en la dirección de $\hat{s}$,
+
+
+$$
+\begin{aligned}
+I_{\eta}(s+ds,\hat{s},t+dt) - I_{\eta}(s,\hat{s},t)
+&= j_{\eta}(s,t)\,ds
+- \kappa_{\eta} I_{\eta}(s,\hat{s},t)\,ds \\
+&\quad - \sigma_{s\eta} I_{\eta}(s,\hat{s},t)\,ds \\
+&\quad + \frac{\sigma_{s\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(s,\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i\,ds
+\end{aligned}
+$$
+
+
+
+
+$$
+\begin{aligned}
+\frac{dI_{\eta}}{ds}
+= \hat{s}\cdot\nabla I_{\eta}
+&= \kappa_{\eta} I_{b\eta}
+- \beta_{\eta} I_{\eta} \\
+&\quad + \frac{\sigma_{s\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+\end{aligned}
+$$
+
+
+Simplificamos de la siguiente manera: 
+
+La ecuación de transferencia radiativa se suele reescribir en términos de coordenadas ópticas adimensionales.
+
+El albedo de dispersión simple se define como:
+
+$$
+\omega_{\eta} \equiv
+\frac{\sigma_{s\eta}}
+{\kappa_{\eta} + \sigma_{s\eta}}
+=
+\frac{\sigma_{s\eta}}
+{\beta_{\eta}}
+$$
+
+Lo que la RTE queda cómo:
+
+
+$$
+\frac{dI_{\eta}}{d\tau_{\eta}}
+=
+-I_{\eta}
++
+(1-\omega_{\eta}) I_{b\eta}
++
+\frac{\omega_{\eta}}{4\pi}
+\int_{4\pi}
+I_{\eta}(\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+$$
+
+
+Los dos últimos términos de la ecuación suelen combinarse y se conocen entonces como la función fuente de la intensidad radiativa.
+
+La irradiancia global se obtiene intregar la intensidad de radiacion en toda la esfera.
+
+$$
+G = \int_{4\pi} I(\hat{s}) \, d\Omega
+$$
+
+
+| Símbolo | Unidades | Nombre |
+|---|---|---|
+| $\kappa$ | $\mathrm{m^{-1}}$ | Coeficiente de absorción |
+| $\sigma_s$ | $\mathrm{m^{-1}}$ | Coeficiente de dispersión |
+| $\beta$ | $\mathrm{m^{-1}}$ | Coeficiente de extinción |
+| $\tau$ | Adimensional | Espesor óptico |
+| $\omega$ | Adimensional | Albedo de dispersión simple |
+| $\Phi(\hat{s}_i,\hat{s})$ | Adimensional | Función de fase |
+| $\varepsilon$ | Adimensional | Emisividad |
+| $\rho$ | Adimensional | Reflectividad |
+| $\tau_t$ | Adimensional | Transmitividad |
+
+ 
+
+
+## Derivación de la ecuación de transporte readiativo
+Podemos observar que la intensidad de radiación es la suma de dos componentes. La primera es la versión integral del término de extinsión, son todos los sumideros de energía radiativa
+
+Comenzemos por reescribir la ecuación diferencial. Quitamos el subíndice espectral $\eta$ o $\lambda$ para simplificar la notación
+
+CASO 1
+
+$$
+%\begin{aligned}
+\frac{dI}{ds}
+= \kappa I_{b}
+- \beta I 
+\quad + \frac{\sigma}{4\pi}
+\int_{4\pi}
+I(x,\hat{s}_i)\,
+\Phi_{\eta}(\hat{s}_i,\hat{s})\,
+d\Omega_i
+%\end{aligned}
+$$
+
+Los dos últimos términos de la ecuación suelen combinarse y se conocen entonces como la función fuente de intensidad radiativa $S(x,\hat{s}_i)$
+
+Sustituyendo $\kappa$ y $\beta$ de tal manera que
+
+$$
+\begin{aligned}
+\kappa &= \beta (1-\omega) \\
+\sigma &= \beta \omega
+\end{aligned}
+$$
+
+
+La RTE queda cómo.
+
+Sustituyendo en la ecuación diferencial:
+
+$$
+\frac{dI}{ds} + \beta I
+=
+\beta (1-\omega) I_b
++
+\beta \frac{\omega}{4\pi}
+\int_{4\pi} I p \, d\Omega'
+$$
+
+Sacamos factor común \(\beta\):
+
+$$
+\frac{dI}{ds} + \beta I
+=
+\beta \left[
+(1-\omega) I_b
++
+\frac{\omega}{4\pi}
+\int_{4\pi} I p \, d\Omega'
+\right]
+$$
+
+El término entre corchetes es precisamente \(S\):
+
+$$
+\frac{dI}{ds} + \beta I = \beta S
+$$
+
+
+La ecuación queda cómo:
+
+$$
+\frac{dI}{ds} + \beta I = \beta S 
+$$
+
+
+Aplicamos un cambio de variable. Dado que:
+
+$$
+\tau = \beta s
+$$
+
+
+Por regla de la cadena:
+
+$$
+\frac{d}{ds}
+=
+\frac{d\tau}{ds}
+\frac{d}{d\tau}
+=
+\beta \frac{d}{d\tau}
+$$
+
+Sustituyendo la RTE queda cómo:
+
+$$
+\frac{dI}{d\tau} + I = S
+$$
+
+### Solución a la EDO
+
+La solución de la EDO se realiza por factor integrante de la forma
+
+$$
+e^{\int 1 \, d\tau} = e^{\tau}
+$$
+
+Quedando la EDO cómo:
+
+
+$$
+\frac{d}{d\tau}(e^\tau I) = e^\tau S
+$$
+
+
+Integramos desde $\tau_0$ hasta $\tau$:
+
+¿Por qué? No estoy seguro. Segun ChatGPt Porque estamos resolviendo la ecuación diferencial a lo largo de una trayectoria óptica entre dos puntos del rayo.
+
+- $\tau_0$ representa el punto inicial del recorrido del rayo,
+- $\tau$ representa el punto donde queremos conocer la intensidad
+
+Integrando ambos lados:
+
+$$
+\int_{\tau_0}^{\tau}
+\frac{d}{d\tau'}
+\left(
+e^{\tau'} I(\tau')
+\right)
+d\tau'
+=
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+$$
+
+El lado izquierdo se evalúa directamente:
+
+$$
+e^{\tau} I(\tau)
+-
+e^{\tau_0} I(\tau_0)
+=
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+$$
+
+Despejamos \(I(\tau)\):
+
+$$
+I(\tau)
+=
+e^{-(\tau-\tau_0)} I(\tau_0)
++
+e^{-\tau}
+\int_{\tau_0}^{\tau}
+e^{\tau'} S(\tau') \, d\tau'
+$$
+
+Metemos el exponencial dentro de la integral:
+
+$$
+I(\tau)
+=
+I(\tau_0)e^{-(\tau-\tau_0)}
++
+\int_{\tau_0}^{\tau}
+e^{-(\tau-\tau')}
+S(\tau') \, d\tau'
+$$
+
+Finalmente recuperamos la dependencia espacial y angular:
+
+$$
+I(x,\hat{s})
+=
+I(x_0,\hat{s})e^{-(\tau-\tau_0)}
++
+\int_{\tau_0}^{\tau}
+e^{-(\tau-\tau')}
+S(x',\hat{s})
+\, d\tau'
+$$
+
+
+El primer término representa la radiación inicial atenuada exponencialmente por absorción y dispersión (**Ley de Beer-Lambert**). EL segundo término representa toda la radiación generada dentro del medio.
+
+
+
+## Referencias
+
+- RADIATIVE HEAT TRANSFER, Third Edition. Michael F. Modest., Elsevier Inc.,  ISBN: 978-0-12-386944-9
+- Linking the Monte Carlo radiative transfer algorithm to the radiative transfer equation,  Patricio J. Valades-Pelayo*, Manuel A. Ramirez-Cabrera and Argelia Balbuena-Ortega

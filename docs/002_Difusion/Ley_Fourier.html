@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Summary – TDC_2026</title>
+<title>2&nbsp; Conducción – TDC_2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./004_Radiacion/RTE.html" rel="prev">
-<link href="./images/ier_logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b1e0664f7163246056094d2f562f3522.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../002_Difusion/Programacion_DF.html" rel="next">
+<link href="../002_Difusion/Intro_dif.html" rel="prev">
+<link href="../images/ier_logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b1e0664f7163246056094d2f562f3522.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,13 +74,42 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="7&nbsp; Summary – TDC_2026">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="2&nbsp; Conducción – TDC_2026">
 <meta property="og:description" content="">
 <meta property="og:image" content="images/ier_logo.png">
 <meta property="og:site_name" content="TDC_2026">
 <meta property="og:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
-<meta name="twitter:title" content="7&nbsp; Summary – TDC_2026">
+<meta name="twitter:title" content="2&nbsp; Conducción – TDC_2026">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="images/ier_logo.png">
 <meta name="twitter:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../002_Difusion/Intro_dif.html">Difusión</a></li><li class="breadcrumb-item"><a href="../002_Difusion/Ley_Fourier.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,12 +139,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/UNAMmasIER_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/UNAMmasIER_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/UNAMmasIER_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../images/UNAMmasIER_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TDC_2026</a> 
+      <a href="../">TDC_2026</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -134,13 +163,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bienvenidos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
   </div>
 </li>
@@ -150,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./002_Difusion/Intro_dif.html" class="sidebar-item-text sidebar-link">
+            <a href="../002_Difusion/Intro_dif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difusión</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,19 +188,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./002_Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link">
+  <a href="../002_Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></span></a>
   </div>
 </li>
@@ -179,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./004_Radiacion/Intro_radiacion.html" class="sidebar-item-text sidebar-link">
+            <a href="../004_Radiacion/Intro_radiacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Radiación</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -188,13 +217,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./004_Radiacion/Interacciones_fisicas.html" class="sidebar-item-text sidebar-link">
+  <a href="../004_Radiacion/Interacciones_fisicas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Interacciones con la frontera</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./004_Radiacion/RTE.html" class="sidebar-item-text sidebar-link">
+  <a href="../004_Radiacion/RTE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
   </div>
 </li>
@@ -202,13 +231,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -217,15 +246,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ecuación-de-difusión-de-calor-ecuación-de-conducción" id="toc-ecuación-de-difusión-de-calor-ecuación-de-conducción" class="nav-link active" data-scroll-target="#ecuación-de-difusión-de-calor-ecuación-de-conducción"><span class="header-section-number">2.1</span> Ecuación de difusión de calor / Ecuación de conducción</a></li>
+  <li><a href="#método-de-diferencias-finitas" id="toc-método-de-diferencias-finitas" class="nav-link" data-scroll-target="#método-de-diferencias-finitas"><span class="header-section-number">2.2</span> Método de diferencias finitas</a></li>
+  <li><a href="#matriz-de-conducción" id="toc-matriz-de-conducción" class="nav-link" data-scroll-target="#matriz-de-conducción"><span class="header-section-number">2.3</span> Matriz de conducción</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../002_Difusion/Intro_dif.html">Difusión</a></li><li class="breadcrumb-item"><a href="../002_Difusion/Ley_Fourier.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></h1>
 </div>
 
 
@@ -242,9 +279,193 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In summary, this book has no content whatsoever.</p>
+<p>El fenómeno de conducción presenta 3 propiedades:</p>
+<ul>
+<li>Es un fenómeno local. Toda interacción ocurre desde un punto solo a sus inmediaciones</li>
+<li>Tienen una dirección preferencial: la que apunte al sitio de menor temperatura</li>
+<li>Se conserva al conducirse</li>
+</ul>
+<section id="ecuación-de-difusión-de-calor-ecuación-de-conducción" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="ecuación-de-difusión-de-calor-ecuación-de-conducción"><span class="header-section-number">2.1</span> Ecuación de difusión de calor / Ecuación de conducción</h2>
+<p>La ecuación de difusión de calor se basa en la ley de Fourier y la conservación de la energía. En su forma general se representa como:</p>
+<p>Cuando ρ (densidad), cp (calor específico) y k (conductividad térmica) no son constantes (pueden depender de T, x, etc.), ya no puedes usar la forma simplificada con α. Debes partir del balance general de energía:</p>
+<p><span class="math display">\[
+\frac{\partial \rho c_p T}{\partial t}
+=
+\nabla \cdot \left( k \nabla T \right)
++ \dot{q}
+\]</span></p>
+<p>En su forma general:</p>
+<p><span class="math display">\[
+\frac{\partial T}{\partial t} = \alpha \nabla^2 T
+\]</span></p>
+<p>Donde <span class="math inline">\(\alpha = \frac{k}{\rho c_p}\)</span>, se le conoce como <strong>coeficiente de difusión</strong> y representa la relación entre la energía transferida con el incremento de la temperatura.</p>
+<!-- ¿Que representaba el alpha fisicamente? Explicar a detalle, tal vez alguna visualización -->
+<p>En su forma expandida:</p>
+<p><span class="math display">\[
+\frac{\partial T}{\partial t} = \alpha \left( \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{\partial^2 T}{\partial z^2} \right)
+\]</span></p>
+<p>“Si los flux de energía convergen la temperatura sube”</p>
+<!-- ¿Que representaba fisicamente los efectos del operador nabla y convergencia? 
+Realizar la analogía a un campo de temperaturas, y observar su visualización vectorial  -->
+</section>
+<section id="método-de-diferencias-finitas" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="método-de-diferencias-finitas"><span class="header-section-number">2.2</span> Método de diferencias finitas</h2>
+<p>Sobre los métodos de discretización:</p>
+<p>Pueden ser hasta polígonos irregulares</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://utec.frbb.utn.edu.ar/wp-content/uploads/2023/10/fimg01.gif" class="img-fluid figure-img"></p>
+<figcaption>Elephant</figcaption>
+</figure>
+</div>
+<p>Para el caso de mallas orenadas con numeración secuencial se les llama <strong>Mallas estrucutradas</strong>. Son las misma que en emplearemos en modelos de convección.</p>
+<p>Partimos el espacio en volúmenes de control que despues enumeraremos, debemos conocer de cada uno: - Su volumen - Los nodos vecinos</p>
+<p>Discretizamos el campo de tempertauras espacial con pequeños espacios donde cada uno tiene una temperatura constante. Aproxiamos las derivadas de la ecuación de conducción, aplicada para cada volumen de control con sus vecinos,como una diferencia entre nodos vecinos:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/1D_recta_nodos.png" class="img-fluid figure-img"></p>
+<figcaption>Recta</figcaption>
+</figure>
+</div>
+<p>La derivada de la temperatura con respecto al espacio en x entre dos volumenes de control lo aproximamos con la la deferencia de temperatura entre ambos volúmenes con respecto a la distancia que les separa.</p>
+<p><span class="math display">\[
+Izq: \left(\frac{\partial T}{\partial x}\right)^- = \frac{T_i - T_{i-1}}{\Delta x}
+\]</span></p>
+<p><span class="math display">\[
+Der: \left(\frac{\partial T}{\partial x}\right)^+ \approx \frac{T_{i+1} - T_{i}}{\Delta x}
+\]</span></p>
+<p>Por último, la segunda derivada parcial de la temperatura con rexpecto a x, será la diferencia entre la derivadas por la derecha y la derivada por la izquierda entre su la distancia:</p>
+<p><span class="math display">\[
+2da: \left(\frac{\partial^2 T}{\partial x}\right)_i \approx \frac{\left(\frac{\partial T}{\partial x}\right)^+ - \left(\frac{\partial T}{\partial x}\right)^-}{\Delta x} = \frac{\frac{T_{i+1} - T_{i}}{\Delta x} - \frac{T_i - T_{i-1}}{\Delta x}}{\Delta x}
+\]</span></p>
+<p>Simplificando la expresión:</p>
+<p><span class="math display">\[
+\boxed{
+\left(\frac{\partial^2 T}{\partial^2 x}\right)_i \approx \frac{1}{\Delta x^2}(T_{j+1} - 2T_{j} + T_{j-1})
+}
+\]</span></p>
+<p>De la ecuación de conducción nos queda aproximar la derivada parcial de la temperatura con respecto al tiempo. Mismo que aprximamos como el cambio de T con respecto a un paso siguiente de tiempo. Lo denotamos con el superindice t y t+1, para el tiempo presente y el tiempo en el paso de tiempo siguiente.</p>
+<p><span class="math display">\[
+\frac{\partial T}{\partial t} \approx \frac{T_i^{t+1} - T_i^{t}}{ \Delta t}
+\]</span></p>
+<p>Conjando ambas aproximaciones:</p>
+<p><span class="math display">\[
+\begin{gather}
+T_i^{t+1} - T_i^{t} = \frac{\alpha \Delta t}{\Delta x^2}(T_{i+1} - 2T_{i} + T_{i-1}) \\
+\frac{\alpha \Delta t}{\Delta x^2} =  \varphi \text{    (Número de Fourier) }
+\end{gather}
+\]</span></p>
+<p>El numero de Fourier reprensenta bla bla.</p>
+<p>Aun queda por resolver el cambio en el tiempo de las derivadas espaciaels pues la evolución del problema está mediado por los cambios de temperatura en el espacio, por lo que debemos analizar tambien como cambia a cada paso de tiempo las derivadas en el término de la derecha.</p>
+<section id="dependencia-temporal" class="level4" data-number="2.2.0.1">
+<h4 data-number="2.2.0.1" class="anchored" data-anchor-id="dependencia-temporal"><span class="header-section-number">2.2.0.1</span> Dependencia temporal</h4>
+<div class="callout callout-style-default callout-note callout-titled" title="Método explícito">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Método explícito
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En la forma explícita todas son variables conocidas excepto <span class="math inline">\(T_i^{t+1}\)</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Método implícito">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Método implícito
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ahora todos los terminos de la derecha son desconocidas y solo conocemos <span class="math inline">\(T_i^{t}\)</span></p>
+<p><span class="math display">\[
+T_i^{t+1} - T_i^{t} = \varphi (T_{i+1}^{t+1} - 2T_{i}^{t+1} + T_{i-1}^{t+1})
+\]</span></p>
+<p>Despejando <span class="math inline">\(T_i^{t}\)</span> obtenemos:</p>
+<p><span class="math display">\[
+T_i^{t} = -\varphi T_{i+1}^{t+1} + (1+2\varphi)T_{i}^{t+1} - \varphi T_{i-1}^{t+1}
+\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="matriz-de-conducción" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="matriz-de-conducción"><span class="header-section-number">2.3</span> Matriz de conducción</h2>
+<p>Empleamos el método implíto para la representación de la Matriz de conducción. Debemos evaluar la ecuación de conducción propuesta por diferencias finitas en su forma implícita pero para cada nodo en que discretizemos el dominio.</p>
+<p>Observamos en la ecuación de transporte como los efectos de conducción solo se trasladan desde el nodo i hasta sus nodos vecinos (i+1, i-1). Por lo que la resolución de la ecuación evaluada en cada nodo presentará tres incognitas supeditadas a las temperaturas en el tiempo t+1 en los nodos i-1, i e i+1.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sistema tridiagonal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div style="overflow-x:auto">
+<p><span class="math display">\[
+\begin{array}{rcl}
+(1+2\varphi)T_1^{t+1} &amp; -\varphi T_2^{t+1} &amp;= T_1^{t} \\
+-\varphi T_1^{t+1} &amp; + (1+2\varphi)T_2^{t+1} &amp; -\varphi T_3^{t+1} = T_2^{t} \\
+&amp; -\varphi T_2^{t+1} + (1+2\varphi)T_3^{t+1} &amp; -\varphi T_4^{t+1} = T_3^{t} \\
+&amp; &amp; -\varphi T_3^{t+1} + (1+2\varphi)T_4^{t+1} -\varphi T_5^{t+1} = T_4^{t}
+\end{array}
+\]</span></p>
+</div>
+</div>
+</div>
+<p>El sistema de ecuaciones presenta una forma tridiagonal semejante por la diagonal del centro. Por último planteamos la matriz correspondiente representada de la forma:</p>
+<p><span class="math display">\[
+\begin{equation}
+    A * T^{t+1} = T^t
+\end{equation}
+\]</span></p>
+<p>$$ <span class="math display">\[\begin{equation}
+    
+\begin{bmatrix}
+(1+2\phi) &amp; -\phi &amp; 0 &amp; 0 &amp; 0 \\
+-\phi &amp; (1+2\phi) &amp; -\phi &amp; 0 &amp; 0 \\
+0 &amp; -\phi &amp; (1+2\phi) &amp; -\phi &amp; 0 \\
+0 &amp; 0 &amp; -\phi &amp; (1+2\phi) &amp; -\phi \\
+0 &amp; 0 &amp; 0 &amp; -\phi &amp; (1+2\phi)
+\end{bmatrix}
+\begin{bmatrix}
+T_1 \\
+T_2 \\
+T_3 \\
+T_4 \\
+T_5
+\end{bmatrix}
+=
+\begin{bmatrix}
+T_1 \\
+T_2 \\
+T_3 \\
+T_4 \\
+T_5
+\end{bmatrix}
++
+\phi
+\begin{bmatrix}
+T_{F1} \\
+0 \\
+0 \\
+0 \\
+T_{F2}
+\end{bmatrix}
+
+\end{equation}\]</span> $$</p>
+<p>Se añaden los efectos de frontera</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -649,13 +870,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./004_Radiacion/RTE.html" class="pagination-link" aria-label="Transferencia de radiación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span>
+      <a href="../002_Difusion/Intro_dif.html" class="pagination-link" aria-label="Difusión">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Difusión</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../002_Difusion/Programacion_DF.html" class="pagination-link" aria-label="Implementación código">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

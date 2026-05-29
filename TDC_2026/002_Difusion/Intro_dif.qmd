@@ -6,7 +6,7 @@ code-annotations: hover
 number-depth: 3
 ---
 
-# Fenómenos de transporte
+# Difusión
 
 ll download the latest data from the ALA, which you are welcome to use instead, though the data might not exactly reproduce results in this
 
@@ -21,4 +21,4 @@ sdvcafdvaefd
 vefv
 ef
 
-![test](images/ier_logo.png)
+![test](../images/ier_logo.png)

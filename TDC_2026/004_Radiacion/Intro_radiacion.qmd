@@ -1,0 +1,30 @@
+
+# Radiación
+
+## Fundamentos de transferencia radiación térmica
+
+Radiación es energía no necesariamente térmica.
+
+A diferencia de los fenómenos de conducción y convección donde la energía se transfiere de molécula a molécula mediante colisiones (es decir, la molécula más rápida pierde parte de su energía cinética en favor de la más lenta) y bajo los dirección del flujo por el que son arrastrados; la radiación se transfiere mediante ondas electromagnéticas o fotones, que pueden viajar largas distancias sin interactuar con un medio (Modest, 2013).
+
+
+Notas. A diferencia de conducción es independiente a la temperatura.
+
+
+Se da a traves de **fotones**. Este mismo se representa vectorialmente.
+
+* → No requeiren materia
+* → No siguen el principio de exclusión de Pauling
+
+Sigue reglas de movimiento.
+
+Eso significa que
+
+Vamos a tomar como medida intensiva la intensidad de Radiación (con unidades de $W/m^2$).
+
+La intensidad y las longitudes de onda de la emisión dependen de
+la temperatura del material emisor.
+___
+
+La **intensidad de radiación** es un flux de energía radiativa y es le promedio temporal de la magnitud del vector de Poyting (¿Qué carajo es eso?) a lo largo del tiempo
+
