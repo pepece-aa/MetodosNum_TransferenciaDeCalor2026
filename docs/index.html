@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TDC_2026</title>
+<title>Métodos numéricos para transferencia de calor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./002_Difusion/Intro_dif.html" rel="next">
 <link href="./images/ier_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -74,13 +74,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="TDC_2026">
-<meta property="og:description" content="Notas del curso: Métodos numéricos para la transferencia de Calor - IER UNAM 2026">
+<meta property="og:title" content="Métodos numéricos para transferencia de calor">
+<meta property="og:description" content="Notas del curso - IER UNAM 2026">
 <meta property="og:image" content="images/ier_logo.png">
-<meta property="og:site_name" content="TDC_2026">
+<meta property="og:site_name" content="Métodos numéricos para transferencia de calor">
 <meta property="og:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
-<meta name="twitter:title" content="TDC_2026">
-<meta name="twitter:description" content="Notas del curso: Métodos numéricos para la transferencia de Calor - IER UNAM 2026">
+<meta name="twitter:title" content="Métodos numéricos para transferencia de calor">
+<meta name="twitter:description" content="Notas del curso - IER UNAM 2026">
 <meta name="twitter:image" content="images/ier_logo.png">
 <meta name="twitter:image:alt" content="A cover image with a Pacific Cleaner Shrimp illustration">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <img src="./images/UNAMmasIER_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TDC_2026</a> 
+      <a href="./">Métodos numéricos para transferencia de calor</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -137,41 +137,31 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Bienvenidos</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Fenómenos de transporte</span></span>
-  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./002_Difusion/Intro_dif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difusión</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Ecuación de conducción por diferencias finitas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./002_Difusion/Programacion_DF.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Implementación código</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Implementación código</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./002_Difusion/Difusion_por_MC.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Solución numérica por Método de Monte Carlo</span></span></a>
   </div>
 </li>
       </ul>
@@ -180,27 +170,27 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./004_Radiacion/Intro_radiacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Radiación</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./004_Radiacion/Interacciones_fisicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Interacciones con la frontera</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Interacciones con la frontera</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./004_Radiacion/RTE.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./004_Radiacion/Solucion_RTE.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Algoritmo de Monte Carlo para la solución del RTE</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algoritmo de Monte Carlo para la solución del RTE</span></span></a>
   </div>
 </li>
       </ul>
@@ -208,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -240,8 +230,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">TDC_2026</h1>
-<p class="subtitle lead">Notas del curso: Métodos numéricos para la transferencia de Calor - IER UNAM 2026</p>
+<h1 class="title">Métodos numéricos para transferencia de calor</h1>
+<p class="subtitle lead">Notas del curso - IER UNAM 2026</p>
 </div>
 
 
@@ -685,8 +675,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introducción">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./002_Difusion/Intro_dif.html" class="pagination-link" aria-label="Difusión">
+        <span class="nav-page-text">Difusión</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

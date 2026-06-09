@@ -37,7 +37,7 @@ La función delta de Dirac $\delta(x − x_0)$ representa una fuente puntual en 
 :::
 
 
-![Función delta de Dirac ($\delta$)](https://www.researchgate.net/publication/336337651/figure/fig1/AS:811726022922243@1570541973763/Representacion-de-la-delta-de-Dirac.jpg){width=80%}
+![Función delta de Dirac ($\delta$)](../images/Funcion_dirac.png){width=80%}
 
 
 
