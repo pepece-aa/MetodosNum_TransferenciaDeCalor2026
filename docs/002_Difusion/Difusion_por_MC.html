@@ -189,7 +189,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../002_Difusion/Ley_Fourier.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conducción</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ecuación de conducción por diferencias finitas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -227,12 +227,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../004_Radiacion/Solucion_RTE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Algoritmo de Monte Carlo para la solución del RTE</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,8 +252,20 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#interpretación-probabilística-de-la-ecuación-de-transporte-de-difusión" id="toc-interpretación-probabilística-de-la-ecuación-de-transporte-de-difusión" class="nav-link active" data-scroll-target="#interpretación-probabilística-de-la-ecuación-de-transporte-de-difusión"><span class="header-section-number">4.1</span> Interpretación probabilística de la ecuación de transporte de difusión</a></li>
+  <li><a href="#función-de-green-para-el-ecuación-de-difusión-buscar-acrónimo" id="toc-función-de-green-para-el-ecuación-de-difusión-buscar-acrónimo" class="nav-link" data-scroll-target="#función-de-green-para-el-ecuación-de-difusión-buscar-acrónimo"><span class="header-section-number">4.2</span> Función de Green para el ecuación de Difusión (buscar acrónimo)</a>
+  <ul class="collapse">
+  <li><a href="#cómo-resolverla" id="toc-cómo-resolverla" class="nav-link" data-scroll-target="#cómo-resolverla"><span class="header-section-number">4.2.1</span> ¿Cómo resolverla?</a></li>
+  <li><a href="#función-de-green-como-propagador" id="toc-función-de-green-como-propagador" class="nav-link" data-scroll-target="#función-de-green-como-propagador"><span class="header-section-number">4.2.2</span> Función de Green como propagador</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">4.3</span> Referencias</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -273,6 +291,9 @@ window.Quarto = {
 
 <p>Debemos evaluar la naturaleza inherente multiescalar integrando metodologías micro y macroescópicas. Donde a escalas menores impera procesos estocásticos; así, a escala mesoscópica el comportamiento de cada partícula es relevante y tambien los efectos colectivos (como la Ley de Fourier).</p>
 <p>Veamos como se comporta una partícula bajo las reglas de Fourier y la ecuación de difusión.</p>
+<!-- ¿Es importante hacer un capítulo donde hablemos de las aproximaciones desde el macro y le micro para hacer la distinción con Fourier y con la mecánica estadística? -->
+<section id="interpretación-probabilística-de-la-ecuación-de-transporte-de-difusión" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="interpretación-probabilística-de-la-ecuación-de-transporte-de-difusión"><span class="header-section-number">4.1</span> Interpretación probabilística de la ecuación de transporte de difusión</h2>
 <p>Pensemos en un experimento mental donde una aguja de Tungsteno con un filo atómico, conserva en su punta unos 4000°C, aquel filo tan diminuto toca la superficie de placa metálica por un microsegundo. Es una placa muy extensa donde sus fronteras tan alejadas no perciben sus efectos de la aguja. ¿Cómo se comportaría la difusión en tal caso?</p>
 <p>Representamos el campo compuesto por una sola partícula por la <strong>función Delta de Dirac</strong>. Misma que tiene las siguientes características:</p>
 <ul>
@@ -280,40 +301,314 @@ window.Quarto = {
 <li>La integración en su dominio es cero.</li>
 <li>En el origen tiene valor infinito.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.researchgate.net/publication/336337651/figure/fig1/AS:811726022922243@1570541973763/Representacion-de-la-delta-de-Dirac.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Dirac</figcaption>
-</figure>
-</div>
-<p>Ahora encontramos la solución fundamental a la ecuación de difusión a partir de la concentración de una carga puntual a partir de la función de Green.</p>
-<p>Para la ecuación de difusión la función de Green correspondiente es:</p>
-<p><span class="math display">\[
-\frac{\partial f}{\partial t} = D \nabla^2 f
-\]</span></p>
-<p>Teniendo como condiciones iniciales que en el tiempo cero (t=0) y en el origen se presenta la función de Dirac.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Resolución de la función de Green
+<span class="screen-reader-only">Note</span>Función Delta de Dirac
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>AAAAAAAAAAAAA</p>
+<p>Una función definida cero en todo su dominio excepto en el origen:</p>
+<p><span class="math display">\[
+\begin{align*}
+\delta(x) &amp;= 0 \quad \text{excepto si} \quad x=0 \\
+\delta(0) &amp;= \infty
+\end{align*}
+\]</span></p>
+<p>La función delta de Dirac se define como cero cuando x = 0 e infinita en x = 0, de tal manera que el área bajo la función es la unidad.</p>
+<p>La función delta de Dirac <span class="math inline">\(\delta(x − x_0)\)</span> representa una fuente puntual en el espacio; técnicamente es una partícula, una unidad de “masa” finita dentro de un dominio de tamaño infinitesimal.</p>
 </div>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.researchgate.net/publication/336337651/figure/fig1/AS:811726022922243@1570541973763/Representacion-de-la-delta-de-Dirac.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Función delta de Dirac (<span class="math inline">\(\delta\)</span>)</figcaption>
+</figure>
+</div>
+<p>Ahora encontramos la solución fundamental a la ecuación de difusión a partir de la concentración de una carga puntual a partir de la función de Green.</p>
+<p><strong>¿Por qué la funcipen de Green es clave para una interpretación probabilística?</strong></p>
+<p>▶ La función de Green, G (x, t|x0, t0), representa la solución a una ecuación de transporte debido a una fuente puntual (impulso unitario) en (x0, t0).</p>
+<p>▶ Matemáticamente, actúa como un propagador que describe cómo la probabilidad (densidad de part´ıculas) se dispersa desde la posición inicial con el tiempo.</p>
+<p>▶ Interpretando la fuente puntual como una partícula localizada en x0 (representada por δ(x − x0)).</p>
+<p>▶ Así, la solución del problema físico puede verse como el promedio estadístico de lo que experimentan muchas partículas por efecto de las leyes físicas.</p>
+<p>▶ En Resumen: establece un vínculo entre la PDE (Ecuación diferencial parcial) y la PDF (función de densidad de probabilidad) que muestrea un método de Monte Carlo.</p>
+</section>
+<section id="función-de-green-para-el-ecuación-de-difusión-buscar-acrónimo" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="función-de-green-para-el-ecuación-de-difusión-buscar-acrónimo"><span class="header-section-number">4.2</span> Función de Green para el ecuación de Difusión (buscar acrónimo)</h2>
+<p>Para la ecuación de difusión la función de Green correspondiente es:</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial t} = D \nabla^2 f
+\]</span></p>
+<p>Teniendo como condiciones iniciales que en el tiempo cero (t=0) y en el origen se presenta la función de Dirac.</p>
 <p>Su solución representa una función Gaussiana que se desplega en si misma a través del tiempo alcanzado a abarcar el dominio entero.</p>
 <p><span class="math display">\[
 f (x,t) = \frac{1}{\sqrt{4\pi Dt}}e^{\frac{-x^2}{4Dt}}
 \]</span></p>
+<!-- En lugar de resolver directamente la ecuación diferencial parcial para condiciones de contorno complejas, la función de Green actúa como una "respuesta de impulso". Debido a que el espacio es infinito (ningún límite bloquea la difusión), el calor simplemente se propaga radialmente hacia afuera. -->
+<!-- Considerar poner esto despues de su derivación -->
+<section id="cómo-resolverla" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="cómo-resolverla"><span class="header-section-number">4.2.1</span> ¿Cómo resolverla?</h3>
+<p>A continuación se muestra su resolución derivando esta función de Green, que también se denomina <strong>solución fundamental de conducción de calor</strong> [1].</p>
+<p>En física matemática, una función de Green se define como la respuesta de un sistema a una fuente puntual impulsiva. Una de las propiedades fascinantes de la sísmica.</p>
+<p>La función de Green G es la respuesta a una fuente de calor plana e impulsiva de espesor infinitesimal, descrita por el producto de dos funciones delta de Dirac, una para el espacio y otra para el tiempo</p>
+<p>Inicialmente, la función de Green es cero hasta que t &gt; τ, y lejos de la fuente de calor, su valor está acotado [1].</p>
+<p>La función de Green para el cuerpo infinito se derivará mediante el método de la transformada de Laplace, y aquí se presenta una breve explicación de dicho método.</p>
+<p>Para el escenario de una sola dimensión, la condición inicial es que en el origen existe un impulso inicial dado por la función de Dirac (<span class="math inline">\(\delta\)</span>), <span class="math inline">\(f(x,0) = \delta (x)\)</span>, en un dominio no acotado. El dominio no acotado</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial t} = D \frac{\partial^2 f}{\partial^2 t}
+\]</span></p>
+<p>Para resolver el escenario en una dimensión debemos aplicar la Transformada de Fourier (TDC).</p>
+<pre><code>    &lt;!-- ! Definición de la transformada de Fourier --&gt;</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Defición de la Transformada de Fourier
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La transformada de Fourier es la expresión natural de la serie de Fourier a la función <strong><span class="math inline">\(f(x)\)</span></strong> de un periodo infinito. EStá definida en terminos de un par de integrales</p>
+<p><span class="math display">\[
+F(\omega)=\int_{-\infty}^{\infty} f(x)\,e^{-i\omega x}\,dx
+\]</span></p>
+<p><span class="math display">\[
+f(x)= \mathcal{F}^{-1}\{F(\omega)\} = \frac{1}{2\pi}\int_{-\infty}^{\infty} F(\omega)\,e^{i\omega x}\,d\omega
+\]</span></p>
+<p>La transformada inversa de Fourier es: <span class="math display">\[
+f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty}
+\hat f(\omega)\, e^{i\omega x} \,d\omega.
+\]</span></p>
+</div>
+</div>
+</div>
+<p>Aplicando la TDF a ambas partes de la ecuación de Green correspondiente en una dimensión:</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}
+\frac{\partial f(x,t)}{\partial t}
+\,e^{-i\omega x}\,dx
+=
+D
+\int_{-\infty}^{\infty}
+\frac{\partial^2 f(x,t)}{\partial x^2}
+\,e^{-i\omega x}\,dx.
+\]</span></p>
+<p><strong>Evaluación del término izquierdo</strong></p>
+<p>Como la integración se realiza respecto a <span class="math inline">\(x\)</span>, la derivada temporal puede extraerse de la integral:</p>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}
+\frac{\partial f(x,t)}{\partial t}
+\,e^{-i\omega x}\,dx
+= \frac{\partial}{\partial t}
+\underbrace{
+\int_{-\infty}^{\infty}
+f(x,t)e^{-i\omega x}\,dx
+}_{\hat{f}(\omega,t)}
+=
+\frac{\partial \hat{f}(\omega,t)}{\partial t}
+\]</span></p>
+<p>Por definición se sustituye por la TDF.</p>
+<p><strong>Evaluación del término de la derecha</strong></p>
+<p><span class="math display">\[
+I= D
+\int_{-\infty}^{\infty}
+\frac{\partial^2 f}{\partial x^2}
+\,e^{-i\omega x}\,dx
+\]</span></p>
+<p>Aplicando integración por partes dos veces:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I
+&amp;=
+\left[
+\frac{\partial f}{\partial x}
+e^{-i\omega x}
+\right]_{-\infty}^{\infty}
++
+i\omega
+\int_{-\infty}^{\infty}
+\frac{\partial f}{\partial x}
+e^{-i\omega x}\,dx \\
+&amp;=
+i\omega
+\left(
+\left[
+f\,e^{-i\omega x}
+\right]_{-\infty}^{\infty}
++
+i\omega
+\int_{-\infty}^{\infty}
+f(x,t)e^{-i\omega x}\,dx
+\right).
+\end{aligned}
+\]</span></p>
+<p>Suponiendo que <span class="math inline">\(f\)</span> y sus derivadas se anulan en el infinito, los términos de frontera desaparecen:</p>
+<p><span class="math display">\[
+I
+=
+-\omega^2
+\underbrace{
+\int_{-\infty}^{\infty}
+f(x,t)e^{-i\omega x}\,dx
+}_{\hat f(\omega,t)}.
+\]</span></p>
+<p>Por lo tanto,</p>
+<p><span class="math display">\[
+I=-\omega^2\hat f(\omega,t).
+\]</span></p>
+<p>Juntando ambos resultados en la igualdad obtenemos:</p>
+<p><span class="math display">\[
+\frac{\partial \hat f(\omega,t)}{\partial t}
+=
+-D\omega^2\hat f(\omega,t).
+\]</span></p>
+<p>Resolvemos por separación de variables</p>
+<!-- ? Checar los límites de la integral sino eliminarlos -->
+<p><span class="math display">\[
+\int_{0}^{t}
+\frac{1}{\hat f}\,d\hat f
+=
+-\int_{0}^{t}
+D\omega^2\,dt'.
+\]</span></p>
+<p><span class="math display">\[
+\hat f(\omega,t)
+=
+\hat f(\omega,0)\,
+e^{-D\omega^2 t}.
+\]</span></p>
+<p>Sin embargo, recordemos que para el tiempo 0, <span class="math inline">\(f\)</span> está determinada por la función de Dirac.</p>
+<p><span class="math display">\[
+\hat f(\omega,0)
+=
+\int_{-\infty}^{\infty}
+\delta(x-x')
+e^{-i\omega x}
+\,dx = 1
+\]</span></p>
+<p>El área bajo la curva de la función de Dirac es 1. Por lo tanto la solución de le ecuación de difusión en le espacio de Fourier es:</p>
+<p><span class="math display">\[
+\hat f(\omega,t)
+=
+e^{-D\omega^2 t}\
+\]</span></p>
+<p>Para regresar al dominio de <span class="math inline">\(x\)</span> debemos aplicar la transformada inversa de Fourier:</p>
+<p><span class="math display">\[
+f(x,t)
+=
+\frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+e^{-D\omega^2 t}
+e^{i\omega x}
+\,d\omega.
+\]</span></p>
+<!-- ? Derivación final a función de Gauss -->
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Ánimo ya casi termina</strong></p>
+</div>
+</div>
+</div>
+<p>Para resover la integral, primero combinamos los exponentes.</p>
+<p><span class="math display">\[
+f(x,t)
+=
+\frac{1}{2\pi}
+\int_{-\infty}^{\infty}
+\exp\!\left(
+-Dt\,\omega^2+i\omega x
+\right)
+\,d\omega.
+\]</span></p>
+<p>La integral es una integral gaussiana. Completando el cuadrado,</p>
+<p><span class="math display">\[
+-Dt\,\omega^2+i\omega x
+=
+-Dt
+\left(
+\omega-\frac{i x}{2Dt}
+\right)^2
+-\frac{x^2}{4Dt}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+f(x,t) =
+\frac{e^{-x^2/(4Dt)}}{2\pi}
+\int_{-\infty}^{\infty}
+e^{-Dt\left(\omega-\frac{i x}{2Dt}\right)^2}
+\,d\omega.
+\]</span></p>
+<p>Usando la identidad gaussiana</p>
+<!-- Investigar esta última identidad -->
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}
+e^{-a u^2}\,du
+=
+\sqrt{\frac{\pi}{a}},
+\qquad a&gt;0,
+\]</span></p>
+<p>con <span class="math inline">\(a=Dt\)</span>, se obtiene</p>
+<p><span class="math display">\[
+f(x,t)
+=
+\frac{e^{-x^2/(4Dt)}}{2\pi}
+\sqrt{\frac{\pi}{Dt}}.
+\]</span></p>
+<p>Simplificando,</p>
+<p><span class="math display">\[
+f(x,t)
+=
+\frac{1}{2\sqrt{\pi Dt}}
+\exp\!\left(
+-\frac{x^2}{4Dt}
+\right).
+\]</span></p>
+<p>Equivalentemente,</p>
+<p><span class="math display">\[
+\boxed{
+f(x,t)
+=
+\frac{1}{\sqrt{4\pi Dt}}
+\exp\!\left(
+-\frac{x^2}{4Dt}
+\right)}
+\]</span></p>
+</section>
+<section id="función-de-green-como-propagador" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="función-de-green-como-propagador"><span class="header-section-number">4.2.2</span> Función de Green como propagador</h3>
+<!-- 
+En esta sección se hará la explicación de como la derivación de la función de Green da un propagador que muestrea el movimiento de una partícula a través del tiempo usando numero aleatorio uniformemente distribudo
+-->
+<p>La función de Green actúa como un <strong>propagador</strong>, describiendo cómo se propaga la densidad de probabilidad de x0 a x a lo largo del tiempo.</p>
+<p>La solución en este sistema de referencia se comporta como una gaussiana que se extiende y está centrada en la posición móvil x = vt.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/Propagador_Green_dif.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Solución fundamental para la conducción del calor. Obtenida de [1]</figcaption>
+</figure>
+</div>
+<p>Es la conocida función de Green para la ecuación de difusión. Este <strong>propagador gaussiano</strong> constituye la base para el muestreo de los desplazamientos de las partículas en las simulaciones de Monte Carlo.</p>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="referencias"><span class="header-section-number">4.3</span> Referencias</h2>
+<p>[1] D. Cole, V. Beck, Haji-Sheikh, B. Litkouhi.(2011). Heat conduction using Green´s Functions. Series in computational and physical Processes in Mechanics and thermal sciences. CRC Press. 2nd ed.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

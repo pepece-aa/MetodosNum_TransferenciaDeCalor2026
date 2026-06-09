@@ -1,5 +1,8 @@
 
-# Conducción
+# Ecuación de conducción por diferencias finitas
+
+
+Es pertinente revisar la interpretación de la ecuación de conducción de calor (ECC):
 
 El fenómeno de conducción presenta 3 propiedades:
 
@@ -7,7 +10,6 @@ El fenómeno de conducción presenta 3 propiedades:
 * Tienen una dirección preferencial: la que apunte al sitio de menor temperatura
 * Se conserva al conducirse
 
-## Ecuación de difusión de calor / Ecuación de conducción
 
 La ecuación de difusión de calor se basa en la ley de Fourier y la conservación de la energía. En su forma general se representa como:
 
@@ -31,12 +33,6 @@ Donde $\alpha = \frac{k}{\rho c_p}$, se le conoce como **coeficiente de difusió
 
 <!-- ¿Que representaba el alpha fisicamente? Explicar a detalle, tal vez alguna visualización -->
 
-En su forma expandida:
-
-$$
-\frac{\partial T}{\partial t} = \alpha \left( \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{\partial^2 T}{\partial z^2} \right)
-$$
-
 
 "Si los flux de energía convergen la temperatura sube"
 
@@ -44,7 +40,11 @@ $$
 Realizar la analogía a un campo de temperaturas, y observar su visualización vectorial  -->
 
 
-## Método de diferencias finitas
+## Métodos de discretización
+
+<!-- Método de diferencias finitas -->
+
+Para la solución de la ECC debemos...
 
 Sobre los métodos de discretización:
 

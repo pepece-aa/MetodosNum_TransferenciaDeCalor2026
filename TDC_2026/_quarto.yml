@@ -4,8 +4,10 @@ project:
 
 book:
   #configuraciones globales
-  title: "TDC_2026"
-  subtitle: "Notas del curso: Métodos numéricos para la transferencia de Calor - IER UNAM 2026"
+  title: "Métodos numéricos para transferencia de calor"
+  subtitle: "Notas del curso - IER UNAM 2026"
+  #subtitle: "Notas del curso - IER UNAM 2026 - métodos deterministas y simulación estocástica"
+
   #author: "César Gael Pérez"
   #date: "25/4/2026"
   favicon: images/ier_logo.png
@@ -32,8 +34,8 @@ book:
 
   chapters:
     - index.qmd
-    - intro.qmd
-    - part: 001_Fenomenos_transporte/intro_FT.qmd
+    #- intro.qmd
+    #- part: 001_Fenomenos_transporte/intro_FT.qmd
 
 
     - part: 002_Difusion/Intro_dif.qmd
@@ -68,6 +70,28 @@ format:
      # - text: |
       #    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
+# ==========================================
+#metadata:
+#  author: "César Gael Pérez Pérez"
+
+#  description: >
+#    Material de apoyo para el curso Métodos Numéricos para la
+#    Transferencia de Calor. Incluye teoría, derivaciones,
+#    ejemplos resueltos e implementación computacional.
+
+#  keywords:
+#    - métodos numéricos
+#    - transferencia de calor
+#    - diferencias finitas
+#    - conducción
+#    - convección
+#    - radiación
+#    - MATLAB
+#    - Python
+#    - UNAM
+#    - IER
+
+# ==========================================
 
 execute:
   code-annotations: hover

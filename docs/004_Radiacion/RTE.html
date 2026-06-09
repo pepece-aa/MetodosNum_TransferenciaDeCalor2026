@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../summary.html" rel="next">
+<link href="../004_Radiacion/Solucion_RTE.html" rel="next">
 <link href="../004_Radiacion/Interacciones_fisicas.html" rel="prev">
 <link href="../images/ier_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -227,12 +227,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Transferencia de radiación</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../004_Radiacion/Solucion_RTE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Algoritmo de Monte Carlo para la solución del RTE</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -252,7 +258,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#ecuación-de-transporte-radiativo-etr" id="toc-ecuación-de-transporte-radiativo-etr" class="nav-link active" data-scroll-target="#ecuación-de-transporte-radiativo-etr"><span class="header-section-number">6.1</span> Ecuación de Transporte Radiativo (ETR)</a></li>
-  <li><a href="#derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" id="toc-derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" class="nav-link" data-scroll-target="#derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo o la aproximación de su solución</a>
+  <li><a href="#derivación-de-la-ecuación-de-transporte-readiativo" id="toc-derivación-de-la-ecuación-de-transporte-readiativo" class="nav-link" data-scroll-target="#derivación-de-la-ecuación-de-transporte-readiativo"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo</a>
   <ul class="collapse">
   <li><a href="#solución-a-la-edo" id="toc-solución-a-la-edo" class="nav-link" data-scroll-target="#solución-a-la-edo"><span class="header-section-number">6.2.1</span> Solución a la EDO</a></li>
   </ul></li>
@@ -405,8 +411,8 @@ G = \int_{4\pi} I(\hat{s}) \, d\Omega
 </tbody>
 </table>
 </section>
-<section id="derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="derivación-de-la-ecuación-de-transporte-readiativo-o-la-aproximación-de-su-solución"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo o la aproximación de su solución</h2>
+<section id="derivación-de-la-ecuación-de-transporte-readiativo" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="derivación-de-la-ecuación-de-transporte-readiativo"><span class="header-section-number">6.2</span> Derivación de la ecuación de transporte readiativo</h2>
 <p>Podemos observar que la intensidad de radiación es la suma de dos componentes. La primera es la versión integral del término de extinsión, son todos los sumideros de energía radiativa</p>
 <p>Comenzemos por reescribir la ecuación diferencial. Quitamos el subíndice espectral <span class="math inline">\(\eta\)</span> o <span class="math inline">\(\lambda\)</span> para simplificar la notación</p>
 <p>CASO 1</p>
@@ -479,8 +485,9 @@ d\Omega_i
 <section id="solución-a-la-edo" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="solución-a-la-edo"><span class="header-section-number">6.2.1</span> Solución a la EDO</h3>
 <p>La solución de la EDO se realiza por factor integrante de la forma</p>
-<p>$$</p>
-<p>e^{ , d} = e^{} $$</p>
+<p><span class="math display">\[
+e^{\int 1 \, d\tau} = e^{\tau}
+\]</span></p>
 <p>Quedando la EDO cómo:</p>
 <p><span class="math display">\[
 \frac{d}{d\tau}(e^\tau I) = e^\tau S
@@ -964,8 +971,8 @@ S(x',\hat{s})
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../004_Radiacion/Solucion_RTE.html" class="pagination-link" aria-label="Algoritmo de Monte Carlo para la solución del RTE">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Algoritmo de Monte Carlo para la solución del RTE</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

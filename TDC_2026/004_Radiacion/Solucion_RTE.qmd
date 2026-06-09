@@ -11,11 +11,14 @@ La cuestión es ¿Cómo muestrear la RTE?
 
 Comenzamos por encontrar la primer solución analítica.
 
+De aquí en adelante la solución y muestreo que en adelante se muestran 
 ## Solución por series de Neumman para la RTE
 
 
-
-bla bla bla
+-Derivación de la RTE. 
+-Obtención de la función de Green de la RTE.
+-Estructuración de MC para la RTE a partir de la función de Green.
+-Programación de MC para la RTE, a un caso aplicado.
 
 
 

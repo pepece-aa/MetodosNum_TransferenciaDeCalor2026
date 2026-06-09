@@ -8,17 +8,61 @@ number-depth: 3
 
 # Difusión
 
-ll download the latest data from the ALA, which you are welcome to use instead, though the data might not exactly reproduce results in this
+<!-- Aquí debería explicar la ley de fourier, su representación fenomenológica, usar imagénes, exponer la ecuación.
 
-### Sobre las paqueterías
+Pero más importente derivar la ecuación de transporte de calor a partir del balance difusico en un volumen de control
+ -->
 
-**Note:** You don't need to run this code block to read this chapter. It can, however, be useful to see the original download query. This code will download the latest data from the ALA, which you are welcome to use instead, though the data might not exactly reproduce results in this chapter.
+
+
+## Ley de Fourier
+
+<!-- Ejemplo del libro del DR PATRICIO
+
+A principios del siglo XIX, Joseph Fourier desarrolló la Ley de Fourier, que establece que el calor fluye de regiones de mayor a menor temperatura a una velocidad proporcional al gradiente de temperatura, mientras estudiaba cómo se propaga el calor a través de los sólidos, particularmente en el contexto de la corteza terrestre y los procesos térmicos a largo plazo. Fourier abordó la transferencia de calor matemáticamente, inspirado por el éxito de la mecánica newtoniana.
+ -->
+
+## Ecuación de transporte de calor / conducción (su derivación)
+
+
+<!-- Aquí expongo las ecuaciones y derivación, la explicaicón física a detalle y síntesis de los coeficientes se harán en el siguiente capítulo -->
+
+La ecuación de difusión de calor se basa en la ley de Fourier y la conservación de la energía. En su forma general se representa como:
+
+Cuando ρ (densidad), cp (calor específico) y k (conductividad térmica) no son constantes (pueden depender de T, x, etc.), ya no puedes usar la forma simplificada con α. Debes partir del balance general de energía:
+
+$$
+\frac{\partial \rho c_p T}{\partial t}
+=
+\nabla \cdot \left( k \nabla T \right)
++ \dot{q}
+$$
+
+
+En su forma general:
+
+$$
+\frac{\partial T}{\partial t} = \alpha \nabla^2 T
+$$
+
+Donde $\alpha = \frac{k}{\rho c_p}$, se le conoce como **coeficiente de difusión** y representa la relación entre la energía transferida con el incremento de la temperatura.
+
+<!-- ¿Que representaba el alpha fisicamente? Explicar a detalle, tal vez alguna visualización -->
+
+En su forma expandida:
+
+$$
+\frac{\partial T}{\partial t} = \alpha \left( \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{\partial^2 T}{\partial z^2} \right)
+$$
+
+
+"Si los flux de energía convergen la temperatura sube"
+
+<!-- ¿Que representaba fisicamente los efectos del operador nabla y convergencia? 
+Realizar la analogía a un campo de temperaturas, y observar su visualización vectorial  -->
+
+
 
 
 ## Conceptos básicos
 
-sdvcafdvaefd
-vefv
-ef
-
-![test](../images/ier_logo.png)

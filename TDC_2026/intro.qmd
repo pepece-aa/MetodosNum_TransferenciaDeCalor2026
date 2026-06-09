@@ -1,5 +1,12 @@
 # Introducción
 
-Este libro bla bla bla
+Este libro ¿qué busca?
+
+
+**En la parte de integración de métodos de Monte Carlo**
+
+▶Aprender a asignar funciones de densidad de probabilidad representativas a procesos físicos.
+▶ Entender cómo muestrear o asignar números aleatorios a estas funciones de densidad de probabilidad.
+▶ Presentar técnicas eficientes para simulación con muchas repeticiones.
 
 
